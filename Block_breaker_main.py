@@ -45,7 +45,7 @@ class Paddle:
             self.x -= self.VEL
         if keys[pygame.K_d] and self.x <= WIDTH - self.width:
             self.x += self.VEL
-        self.paddlerect = pygame.Rect(self.x, self.y, self.width, self.height) # vytvoření obdéln íku pro pálku
+        self.paddlerect = pygame.Rect(self.x, self.y, self.width, self.height) # vytvoření obdélníku pro pálku
 
     def draw(self,win):
         pygame.draw.rect(win, WHITE, self.paddlerect) # kreslení pálky
@@ -63,7 +63,7 @@ class Ball: #vše spojené s míčkem + řeší se zde i všechny kolize
         self.vel_y = 2
         self.vel_xx = 2
         self.score = 0
-        self.ball_rect = pygame.Rect(self.x,self.y,self.radius*2,self.radius*2) # obdílník pro míček
+        self.ball_rect = pygame.Rect(self.x,self.y,self.radius*2,self.radius*2) # obdélník pro míček
         self.kolize = False
         
 
